@@ -1,0 +1,329 @@
+/* Color theme and variables */
+:root {
+    --latte: #a08c83;
+    --stone: #CDC6C3;
+    --dustRose: #D4B2A7;
+    --nude: #E7D7C9;
+    --ivory: #ede9e3;
+    --radius: 6px;
+    --ease: all 0.4s ease;
+    --headerColor: #444444;
+}
+
+/* For all elements */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0px;
+    font-family: "Inter", sans-serif;
+    color: var(--headerColor);
+    padding: 0px 20px;
+    background-color: var(--ivory);
+}
+
+/* for all icons */
+.icon {
+    width: 24px;
+    height: 24px;
+    margin: 0px 3px;
+}
+
+/* to apply colors */
+.accentColor {
+    color: var(--latte);
+}
+
+.paragraph {
+    color: var(--latte);
+}
+
+a {
+    color: var(--headerColor);
+    /* remove default underlining */
+    text-decoration: none;
+}
+
+p {
+    line-height: .8cm;
+}
+
+/* to center elements */
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* to group sections and add margins */
+section {
+    margin: 20px 0px;
+}
+
+/* for background images */
+.backgroundFix {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* to create total separation between elements */
+.flex-space-btw {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+/* to apply equal spacing between elements */
+.grid2, .grid3 {
+    display: grid;
+    /* place in twos */
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.grid3 {
+    /* place in three */
+    grid-template-columns: repeat(3, 1fr);
+}
+  
+/* to create responsive in-line elements */
+.flex-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} 
+  
+/* wrap around elements and space on both sides */
+.container {
+    width: auto;
+    margin: auto;
+    height: auto;
+    background-color: var(--dustRose);
+}
+  
+.bold {
+    font-weight: bold;
+    font-size: 18px;
+} 
+
+/* for a fancy scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+  
+/* scroll bar Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}     
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--latte);
+    border-radius: 10px;
+} 
+  
+/* scroll bar Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--headerColor);
+}
+  
+.padChild {
+    padding: 25px;
+}
+
+/******************************************************/
+/******************* Menu Sidebar *********************/
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--latte);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #070707;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidebar a:hover {    
+    color: #f1f1f1;
+}
+  
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--latte);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+  
+.openbtn:hover {
+    background-color: var(--stone);
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+/*================================================================
+============== CSS property to back to top button ================
+/*==============================================================*/
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(0, 0, 0); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+  
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/******************************************************/
+
+/* nav section */
+.topHeader .logo {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+@media (max-width: 500px) {
+    .topHeader .flex-space-btw {
+      display: block;
+      text-align: center;
+    }
+}
+
+/* About Section */
+.aboutSection .aboutImg {
+    height: 350px;
+    width: 60%;
+    margin-left: auto;
+    border-radius: 50%;
+    background-color: white;
+}
+
+@media (max-width: 1000px) {
+    .aboutSection .aboutImg {
+      width: 80%;
+    }
+    @media (max-width: 800px) {
+        .aboutSection {   
+            display: block;
+        }
+        .aboutSection .aboutImg {
+            display: none;
+        }
+    }
+}
+
+/* experience section */
+.experience-section .resume {
+    margin-top: 30px;
+    display: block;
+}
+  
+/* portfolio section */
+.portfolio-section p {
+    font-size: 14px;
+}
+
+.portfolio-section .portfolio-image {
+    height: 250px;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .portfolio-section .grid3 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 550px) {
+        .portfolio-section .grid3 {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+/*================================================================
+============= CSS property to place div side by side =============
+/*==============================================================*/
+#leftbox {
+    float: left;
+    background: var(--latte);
+    width: 25%;
+    height: auto;
+}
+
+#middlebox {
+    float: left;
+    background: var(--latte);
+    width: 50%;
+    height: auto; 
+
+    align-content: center;
+
+}
+
+#rightbox {
+    float: right;
+    background: var(--latte);
+    width: 25%;
+    height: auto;
+}
+
+h2 {
+    color: var(--nude);
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 28pt;
+    align-content: center;
+    width: fit-content;
+    text-align: center;
+    border-radius: 25%;
+    background-color: white;
+}
+
+.projects-section img {
+    height: 350px;
+    width: 60%;
+    margin-left: auto;
+    padding: 1rem;
+}
