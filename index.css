@@ -205,7 +205,7 @@ section {
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
     background-color: rgb(0, 0, 0); /* Set a background color */
-    color: white; /* Text color */
+    color: rgb(192, 27, 27); /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
@@ -283,6 +283,19 @@ section {
     }
 }
 
+.PS-section img {
+    float: left;
+    margin: 5px;
+    height: 400px;
+    width: 60%;
+    margin-left: auto;
+    padding: 1rem;
+}
+
+.PS-section p {
+    text-align: justify;
+}
+
 /*================================================================
 ============= CSS property to place div side by side =============
 /*==============================================================*/
@@ -296,9 +309,9 @@ section {
 #middlebox {
     float: left;
     background: var(--latte);
-    width: 50%;
+    width: 25%;
     height: auto; 
-
+    text-align: center;
     align-content: center;
 
 }
@@ -318,12 +331,22 @@ h2 {
     width: fit-content;
     text-align: center;
     border-radius: 25%;
+    padding: 10px;
     background-color: white;
 }
 
 .projects-section img {
-    height: 350px;
+    height: 400px;
     width: 60%;
     margin-left: auto;
     padding: 1rem;
 }
+
+.projects-section h2 {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+}
+
